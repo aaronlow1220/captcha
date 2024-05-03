@@ -17,7 +17,7 @@
             <div class="navbar-content">
                 <a class="navbar-item" href="{{ route("pages.home") }}">首頁</a>
                 <a class="navbar-item" href="">展場介紹</a>
-                <a class="navbar-item" href="">我的照片</a>
+                <a class="navbar-item" href="{{ route("pages.photos") }}">我的照片</a>
             </div>
             <div class="navbar-content">
                 <a class="filled-btn" href="{{ route("pages.login") }}">登入</a>

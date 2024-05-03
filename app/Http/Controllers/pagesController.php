@@ -17,4 +17,8 @@ class pagesController extends Controller
     public function register(Request $request){
         return view("register");
     }
+
+    public function photos(Request $request){
+        return view("photos");
+    }
 }
