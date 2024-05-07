@@ -16,7 +16,7 @@
                     </h2>
                 </div>
                 <div class="card-img">
-                    <img src="{{ asset('/assets/img/user.png') }}" alt="">
+                    <img src="{{ asset('/assets/img/user.jpg') }}" alt="">
                 </div>
                 <div class="card-btn">
                     <a class="btn no-deco" href="">
@@ -24,66 +24,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-title">
-                    <h2>
-                        Game 1
-                    </h2>
-                </div>
-                <div class="card-img">
-                    <img src="{{ asset('/assets/img/user.png') }}" alt="">
-                </div>
-                <div class="card-btn">
-                    <a class="btn no-deco" href="">
-                        Download
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <h2>
-                        Game 1
-                    </h2>
-                </div>
-                <div class="card-img">
-                    <img src="{{ asset('/assets/img/user.png') }}" alt="">
-                </div>
-                <div class="card-btn">
-                    <a class="btn no-deco" href="">
-                        Download
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <h2>
-                        Game 1
-                    </h2>
-                </div>
-                <div class="card-img">
-                    <img src="{{ asset('/assets/img/user.png') }}" alt="">
-                </div>
-                <div class="card-btn">
-                    <a class="btn no-deco" href="">
-                        Download
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <h2>
-                        Game 1
-                    </h2>
-                </div>
-                <div class="card-img">
-                    <img src="{{ asset('/assets/img/user.png') }}" alt="">
-                </div>
-                <div class="card-btn">
-                    <a class="btn no-deco" href="">
-                        Download
-                    </a>
-                </div>
-            </div>
+            
         </div>
     </div>
 @endsection

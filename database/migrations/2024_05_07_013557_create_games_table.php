@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string("uuid");
-            $table->string("username")->nullable();
-            $table->string("email")->nullable();
-            $table->string("password")->nullable();
-            $table->integer("play_count")->nullable();
-            $table->tinyInteger("status")->default(1);
-            $table->tinyInteger("is_admin")->default(0);
+            $table->string("user")->nullable();
+            $table->json("choices")->nullable();
+            $table->string("time_used")->nullable();
+            $table->tinyInteger("status")->default(0);
+            // Status
+            // 0 -> Not Pass
+            // 1 -> Passed
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('games');
     }
 };
