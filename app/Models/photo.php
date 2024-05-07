@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class photo extends Model
 {
     use HasFactory;
+    protected $table = "models";
+    protected $fillable = ["uuid", "photo", "user", "status"];
 }
