@@ -53,9 +53,27 @@
                 </svg>
                 <input placeholder="Enter your Confirm Password" class="input" type="password">
             </div>
+            <div class="fsub">
+                <div class="captcha">
+                    <div class="spinner">
+                        <label>
+                            <input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+                            <span class="checkmark"><span>&nbsp;</span></span>
+                        </label>
+                    </div>
+                    <div class="text">
+                        我不是機器人
+                    </div>
+                    <div class="logo">
+                        <img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/" />
+                        <p>reCAPTCHA</p>
+                        <small>隱私權 - 條款</small>
+                    </div>
+                </div>
+            </div>
             <button class="button-submit">Register</button>
             <p class="p">
-                Don't have an account?
+                Already have an account?
                 <a class="no-deco" href="{{ route('pages.login') }}"><span class="span">Login</span></a>
             </p>
         </form>
