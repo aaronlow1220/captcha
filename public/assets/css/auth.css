@@ -73,7 +73,7 @@
 }
 
 .button-submit {
-    margin: 20px 0 10px 0;
+    margin-bottom: 0.3rem;
     background-color: #1d1d1f;
     border: none;
     color: white;
@@ -228,7 +228,7 @@ input[type="checkbox"]:checked+.checkmark>span:before {animation:.5s rightslide 
 	margin:0;
 	font-size:0.645rem;
 	font-weight:500;
-	margin:.4em 0 .2em 0;
+	margin:0.1rem 0 0 0;
 }
 .logo small {
 	color:#9d9ba7;
