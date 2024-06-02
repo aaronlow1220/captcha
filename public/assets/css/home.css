@@ -12,6 +12,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: top right;
     border-radius: 2rem;
 }
 
@@ -28,9 +29,50 @@
 
 .main-text {
     position: absolute;
+    width: 80%;
     color: #fff;
-    font-size: 6rem;
     bottom: 2rem;
     left: 4rem;
     z-index: 1;
+}
+
+.main-text h1 {
+    font-size: 6rem;
+}
+.main-text p {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .main-text {
+        bottom: 4rem;
+    }
+
+    .main-text h1 {
+        font-size: 4rem;
+    }
+    .main-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 529px) {
+    .main-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        bottom: 0;
+        left: 0;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+    .main-text h1 {
+        font-size: 3rem;
+    }
+    .main-text p {
+        font-size: 1rem;
+    }
 }

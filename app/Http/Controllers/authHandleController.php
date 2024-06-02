@@ -30,6 +30,32 @@ class authHandleController extends Controller
         ];
 
         user::create($data);
-        // dd($request);
+        return redirect()->route("pages.home");
+    }
+
+    public function login(Request $request){
+        $this->validate($request, [
+            "cEmail" => ["required", "email"],
+            "cPassword" => ["required"],
+        ]);
+
+        $data = [
+            "email" => $request->cEmail,
+            "password"=>$request->cPassword,
+        ];
+
+        if (Auth::attempt($data)) {
+            $request->session()->regenerate();
+            return redirect()->route("pages.home");
+        }
+
+        return back()->with([
+            "error" => "登入失敗！請檢查帳號與密碼是否正確",
+        ])->withInput($request->only("cEmail"));
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route("pages.home");
     }
 }

@@ -8,12 +8,10 @@
 
 @section('main-content')
     <div class="main-container">
-        <form class="form">
-            <div class="flex-column">
-                <h1>Login</h1>
-            </div>
-            <div class="flex-column">
-                <label>Email</label>
+        <form class="form" method="POST" action="{{ route("auth.loginHandle") }}">
+            @csrf
+            <div class="flex-column center">
+                <h1>登入</h1>
             </div>
             <div class="inputForm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
@@ -23,11 +21,7 @@
                         </path>
                     </g>
                 </svg>
-                <input placeholder="Enter your Email" class="input" type="text">
-            </div>
-
-            <div class="flex-column">
-                <label>Password</label>
+                <input placeholder="電郵地址" class="input" type="text" name="cEmail">
             </div>
             <div class="inputForm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
@@ -38,12 +32,12 @@
                         d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
                     </path>
                 </svg>
-                <input placeholder="Enter your Password" class="input" type="password">
+                <input placeholder="密碼" class="input" type="password" name="cPassword">
             </div>
-            <button class="button-submit">Login</button>
+            <button type="submit" class="button-submit">登入</button>
             <p class="p">
-                Don't have an account?
-                <a class="no-deco" href="{{ route('pages.register') }}"><span class="span">Register</span></a>
+                沒有帳號？
+                <a class="no-deco" href="{{ route('pages.register') }}"><span class="span">立即註冊</span></a>
             </p>
         </form>
     </div>

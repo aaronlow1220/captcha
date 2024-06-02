@@ -70,7 +70,7 @@ body {
 .main-container {
     height: calc(100dvh - 160px);
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     padding: 0 4rem;
 }
@@ -82,6 +82,7 @@ body {
 .hamburger {
     display: none;
     cursor: pointer;
+    z-index: 3;
 }
 
 .hamburger input {
@@ -133,7 +134,31 @@ body {
         margin: 1rem 2rem;
     }
 
+    .navbar-menu {
+        position: fixed;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 4rem 2rem;
+        bottom: 0;
+        left: -100%;
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+        flex-direction: column;
+        z-index: 2;
+        background-color: #1d1d1f;
+        transition: all 0.5s;
+    }
+
     .navbar-content {
-        display: none;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .on{
+        left: 0%;
+        transition: all 0.5s;
     }
 }

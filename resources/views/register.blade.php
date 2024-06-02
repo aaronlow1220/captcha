@@ -14,7 +14,7 @@
     <div class="main-container">
         <form class="form" id="regForm" method="POST" action="{{ route('auth.registerHandle') }}">
             @csrf
-            <div class="flex-column">
+            <div class="flex-column center">
                 <h1>註冊帳號</h1>
             </div>
             <div class="inputForm">
@@ -80,8 +80,8 @@
             </div>
             <button class="button-submit">註冊帳號</button>
             <p class="p">
-                Already have an account?
-                <a class="no-deco" href="{{ route('pages.login') }}"><span class="span">Login</span></a>
+                已經有帳號？
+                <a class="no-deco" href="{{ route('pages.login') }}"><span class="span">立即登入</span></a>
             </p>
         </form>
     </div>
