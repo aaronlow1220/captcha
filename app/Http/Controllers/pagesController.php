@@ -33,7 +33,7 @@ class pagesController extends Controller
         if (!Auth::check()) {
             return redirect()->route("pages.login");
         }
-        $photos = photo::where("user", Auth::user()->uuid)->get();
+        $photos = photo::where("user", Auth::user()->uuid)->orderBy("created_at", "desc")->get();
         return view("photos", ["photos" => $photos]);
     }
 }
