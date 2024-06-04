@@ -131,7 +131,7 @@ body {
     }
 
     .navbar-container {
-        margin: 1rem 2rem;
+        margin: 1rem 1.5rem;
     }
 
     .navbar-menu {
@@ -148,7 +148,7 @@ body {
         flex-direction: column;
         z-index: 2;
         background-color: #1d1d1f;
-        transition: all 0.5s;
+        transition: all cubic-bezier(.15,.75,.5,.98) 0.5s;
     }
 
     .navbar-content {
@@ -159,6 +159,6 @@ body {
 
     .on{
         left: 0%;
-        transition: all 0.5s;
+        transition: all cubic-bezier(.15,.75,.5,.98) 0.5s;
     }
 }

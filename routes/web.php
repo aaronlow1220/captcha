@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authHandleController;
+use App\Http\Controllers\pageTestController;
 use App\Http\Controllers\unityController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pagesController;
@@ -20,4 +21,10 @@ Route::name("auth.")->group(function () {
 
 Route::name("unity.")->group(function () {
     Route::get("/unity/getStartGameUser", [unityController::class, "getStartGameUser"])->name("getStartGameUser");
+});
+
+// --- Test ---
+Route::name("test.")->group(function () {
+    Route::get("/testingOnly/imageUploadPage", [pageTestController::class, "testImageUploadPage"])->name("testImageUploadPage");
+    Route::post("/testingOnly/imageUpload", [pageTestController::class, "testImageUpload"])->name("testImageUpload");
 });
