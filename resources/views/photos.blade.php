@@ -23,7 +23,6 @@
                     </div>
                     <div class="card-img">
                         <img src="{{ $photo->photo }}" alt="">
-                        {{-- <img src="{{ asset('/assets/img/user.jpg') }}" alt=""> --}}
                     </div>
                     <div class="card-btn">
                         <a class="btn no-deco" href="{{ $photo->photo }}" download>
