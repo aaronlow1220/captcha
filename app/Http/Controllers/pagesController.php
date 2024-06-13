@@ -36,4 +36,26 @@ class pagesController extends Controller
         $photos = photo::where("user", Auth::user()->uuid)->orderBy("created_at", "desc")->get();
         return view("photos", ["photos" => $photos]);
     }
+
+    public function play(Request $request)
+    {
+        return view("play");
+    }
+
+    public function start(Request $request)
+    {
+        if (!Auth::check()) {
+            return redirect()->route("pages.login");
+        }
+
+        $user = Auth::user();
+        return view("start" , ["user"=>$user]);
+    }
+
+    public function authenticate(Request $request, $userid){
+        $user = user::where("uuid", $userid)->first();
+        $count = $user->play_count + 1;
+        $user->update(["player_count"=>$count]);
+        return "OK";
+    }
 }

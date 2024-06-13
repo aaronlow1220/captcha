@@ -11,12 +11,16 @@ Route::name("pages.")->group(function () {
     Route::get("/login", [PagesController::class, "login"])->name("login");
     Route::get("/register", [PagesController::class, "register"])->name("register");
     Route::get("/photos", [PagesController::class, "photos"])->name("photos");
+    Route::get("/play", [pagesController::class, "play"])->name("play");
+    Route::get("/start", [pagesController::class, "start"])->name("start");
+    Route::get("/authenticate/{userid}", [pagesController::class, "authenticate"])->name("authenticate");
 });
 
 Route::name("auth.")->group(function () {
     Route::post("/registerHandle", [authHandleController::class, "register"])->name("registerHandle");
     Route::post("/loginHandle", [authHandleController::class, "login"])->name("loginHandle");
     Route::get("/logoutHandle", [authHandleController::class, "logout"])->name("logoutHandle");
+    Route::post("/playHandle", [authHandleController::class, "play"])->name("playHandle");
 });
 
 Route::name("unity.")->group(function () {

@@ -58,4 +58,27 @@ class authHandleController extends Controller
         Auth::logout();
         return redirect()->route("pages.home");
     }
+
+    public function play(Request $request){
+        $this->validate($request, [
+            "cUsername" => ["required"],
+        ]);
+
+        $data = [
+            "username" => $request->cUsername,
+            "uuid" => Helper::prefixedUuid("user_"),
+            "password"=> Hash::make("123"),
+            "play_count" => 0,
+            "status" => 1,
+            "is_admin" => 0,
+        ];
+        user::create($data);
+
+        $ldata = [
+            "username"=>$request->cUsername,
+            "password"=>123
+        ];
+        Auth::attempt($ldata);
+        return redirect()->route("pages.start");
+    }
 }
